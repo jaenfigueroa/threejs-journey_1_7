@@ -1,16 +1,7 @@
 # Three.js Journey
 
-## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+## Tareas realizadas
 
-``` bash
-# Install dependencies (only the first time)
-npm install
-
-# Run the local server at localhost:8080
-npm run dev
-
-# Build for production in the dist/ directory
-npm run build
-```
+- QUitar scrolls innesarios
+- Eliminar ese borde azul que aparece en algunos ordenadores en el canvas
+- Adaptar el canvas a los cambios de tmaño de viewport
