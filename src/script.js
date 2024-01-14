@@ -16,7 +16,7 @@ const scene = new THREE.Scene()
 
 const mesh = new THREE.Mesh(
   new THREE.BoxGeometry(1, 1, 1, 5, 5, 5),
-  new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
+  new THREE.MeshBasicMaterial({ color: 0xff0000 /* wireframe: true */ })
 )
 
 scene.add(mesh)
@@ -40,6 +40,10 @@ window.addEventListener('resize', () => {
 
   // Update renderer
   renderer.setSize(sizes.width, sizes.height)
+
+  /* para evitar el efecto de escaleras, al cambiar
+  la ventan entre monitores con diferente aspect ratio  */
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
 
 /**
@@ -66,6 +70,14 @@ const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
 })
 renderer.setSize(sizes.width, sizes.height)
+
+/* 
+para evitar es efecto de pixelacion tipo escalera,
+en los bordes de los objetos
+tambien para mejorar el rendimiento en pantallas de alta resolucion,
+limitar el pixel ratio a 2, mas de de esi o es enecsario,
+*/
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
  * Animate
