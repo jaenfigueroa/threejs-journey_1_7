@@ -46,6 +46,16 @@ window.addEventListener('resize', () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
 
+window.addEventListener('dblclick', () => {
+  if (!document.fullscreenElement) {
+    // activar pantalla completa para el canvas
+    canvas.requestFullscreen()
+  } else {
+    // salir de pantalla completa (aqui no sale  del canvas)
+    document.exitFullscreen()
+  }
+})
+
 /**
  * Camera
  */

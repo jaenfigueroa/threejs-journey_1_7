@@ -9,3 +9,5 @@
 - quitar ese efecto de escaleras en los objetos
 - mejorar el rendimiento en pantallas de alta resolucion,
   limitar el pixel ratio a 2, mas de de esi o es enecsario
+
+- Activar pantalla completa para el canvas y salir de pantalla completa
