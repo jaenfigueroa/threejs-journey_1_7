@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  /* 
+  para evitar que al usar el trackpack, haga ese efecto de
+  moverme mas alla del limite que se deberia poder
+  */
+  overflow: hidden;
+}
+
+canvas.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*
+  quitar el borde azul que aparece en algunos navegadores,
+  computadores, etc.
+  */
+  outline: none;
+}
